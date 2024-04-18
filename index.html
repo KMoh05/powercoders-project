@@ -3,19 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project</title>
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
+      <h1>Task Manager</h1>
     </header>
+
+    <main>
+      <section class="task-form">
+        <h2>Add Task</h2>
+        <form>
+          <label for="task-name">Task Name:</label>
+          <input type="text" id="task-name" name="task-name" required />
+          <label for="task-date">Due Date:</label>
+          <input type="date" id="task-date" name="task-date" required />
+          <button type="submit">Add Task</button>
+        </form>
+      </section>
+
+      <section class="task-list">
+        <h2>Task List</h2>
+        <ul></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Task Manager</p>
+    </footer>
   </body>
 </html>
