@@ -16,6 +16,16 @@ body {
     margin: 0px;
 }
 
+.login-register {
+    float: right;
+    padding: 9px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    background: red;
+    border: none;
+}
+
 .navbar {
     width: 100%;
     background-color: red;
@@ -23,7 +33,8 @@ body {
 }
 
 .navbar a {
-    display: inline-block;    padding: 12px;
+    display: inline-block;
+    padding: 12px;
     color: white;
     text-decoration: none;
     font-size: 17px;
