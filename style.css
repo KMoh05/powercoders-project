@@ -23,20 +23,20 @@ body {
 }
 
 .navbar a {
-    float: left;
-    padding: 12px;
-    color: lightgray;
+    display: inline-block;    padding: 12px;
+    color: white;
     text-decoration: none;
     font-size: 17px;
 }
 
 .navbar a:hover {
-    background-color: lightgray;
+    background-color: white;
     color: red;
 }
+
 .active {
     background-color: darkred;
-    color: lightgray;
+    color: white;
 }
 
 @media screen and (max-width: 500px) {
@@ -87,6 +87,11 @@ main {
     cursor: pointer;
 }
 
+.task-form button:hover {
+    background-color: darkred;
+    color: white;
+}
+
 .task-list {
     text-align: center;
 }
@@ -98,10 +103,17 @@ main {
 .task-list ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .task-list li {
-    margin-bottom: 5px;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .task-list button {
@@ -111,6 +123,11 @@ main {
     border: none;
     cursor: pointer;
     margin-left: 10px;
+}
+
+.task-list button:hover {
+    background-color: darkred;
+    color: white;
 }
 
 footer {
@@ -158,4 +175,9 @@ footer {
     color: white;
     border: none;
     cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: darkred;
+    color: white;
 }

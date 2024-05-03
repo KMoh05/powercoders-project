@@ -12,14 +12,20 @@
   </head>
   <body>
     <header>
-      <div class="navbar">
-        <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
-        <a href="about.html"><i class="fa fa-fw fa-info"></i> About</a>
-        <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-        <a href="#" style="float: right"
-          ><i class="fa fa-fw fa-user"></i> Login</a
+      <nav class="navbar">
+        <a href="index.html" alt="Home"
+          ><i class="fa fa-fw fa-home"></i> Home</a
         >
-      </div>
+        <a href="about.html" alt="About"
+          ><i class="fa fa-fw fa-info"></i> About</a
+        >
+        <a href="contact.html" alt="Contact"
+          ><i class="fa fa-fw fa-envelope"></i> Contact</a
+        >
+        <button style="float: right">
+          <i class="fa fa-fw fa-user"></i> Login/Register
+        </button>
+      </nav>
     </header>
 
     <main>
@@ -27,9 +33,21 @@
         <h2>Add Task</h2>
         <form>
           <label for="task-name">Task Name:</label>
-          <input type="text" id="task-name" name="task-name" required />
+          <input
+            type="text"
+            id="task-name"
+            name="task-name"
+            aria-label="Task Name"
+            required
+          />
           <label for="task-date">Due Date:</label>
-          <input type="date" id="task-date" name="task-date" required />
+          <input
+            type="date"
+            id="task-date"
+            name="task-date"
+            aria-label="Due Date"
+            required
+          />
           <button type="submit">Add Task</button>
         </form>
       </section>
@@ -46,4 +64,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-

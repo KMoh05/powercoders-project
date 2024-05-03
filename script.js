@@ -14,14 +14,27 @@ form.addEventListener('submit', function(event) {
 
     // Create a new task item
     const taskItem = document.createElement('li');
-    taskItem.textContent = `${taskName} - ${taskDate}`;
-    button = document.createElement('button');
-    button.textContent = 'Delete';
-    taskItem.appendChild(button);
-    button.addEventListener('click', function() {
+    const taskText = document.createTextNode(`${taskName} - ${taskDate}`);
+    taskItem.appendChild(taskText);
+
+    // Create the delete button
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    taskItem.appendChild(deleteButton);
+    deleteButton.addEventListener('click', function() {
         taskList.removeChild(taskItem);
     });
 
+    // Create the edit button
+    const editButton = document.createElement('button');
+    editButton.textContent = 'Edit';
+    taskItem.appendChild(editButton);
+    editButton.addEventListener('click', function() {
+        const newTaskName = prompt('Enter new task name and date', taskText.textContent);
+        if (newTaskName !== null) {
+            taskText.textContent = newTaskName;
+        }
+    });
 
     // Append the task item to the task list
     taskList.appendChild(taskItem);
