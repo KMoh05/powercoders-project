@@ -1,175 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online tools</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="icon" href="task.png" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Tools - Calculator</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="task.png">
+</head>
+<body>
     <header>
-      <nav class="navbar">
-        <a href="index.html" alt="Home"
-          ><i class="fa fa-fw fa-home"></i> Home</a
-        >
-        <a href="tasks.html" alt="Tasks manager"
-          ><i class="fa fa-fw fa-tasks"></i> Tasks manager</a
-        >
-        <a href="notepad.html" alt="Notepad"
-          ><i class="fa fa-fw fa-book"></i> Notepad</a
-        >
-        <a href="calculator.html" alt="Calculator"
-          ><i class="fa fa-fw fa-calculator"></i> Calculator</a
-        >
-      </nav>
+        <nav class="navbar">
+            <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="tasks.html"><i class="fa fa-fw fa-tasks"></i> Tasks Manager</a>
+            <a href="notepad.html"><i class="fa fa-fw fa-book"></i> Notepad</a>
+            <a href="calculator.html"><i class="fa fa-fw fa-calculator"></i> Calculator</a>
+        </nav>
     </header>
-
     <main>
-      <table id="calcu">
-        <tr>
-          <td colspan="3"><input type="text" id="result" /></td>
-          <td><input type="button" value="c" onclick="clr()" /></td>
-        </tr>
-        <tr>
-          <td>
-            <input
-              type="button"
-              value="1"
-              onclick="dis('1')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-          <td>
-            <input
-              type="button"
-              value="2"
-              onclick="dis('2')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-          <td>
-            <input
-              type="button"
-              value="3"
-              onclick="dis('3')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-          <td>
-            <input
-              type="button"
-              value="/"
-              onclick="dis('/')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input
-              type="button"
-              value="4"
-              onclick="dis('4')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-          <td>
-            <input
-              type="button"
-              value="5"
-              onclick="dis('5')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-          <td>
-            <input
-              type="button"
-              value="6"
-              onclick="dis('6')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-          <td>
-            <input
-              type="button"
-              value="*"
-              onclick="dis('*')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input
-              type="button"
-              value="7"
-              onclick="dis('7')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-          <td>
-            <input
-              type="button"
-              value="8"
-              onclick="dis('8')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-          <td>
-            <input
-              type="button"
-              value="9"
-              onclick="dis('9')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-          <td>
-            <input
-              type="button"
-              value="-"
-              onclick="dis('-')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input
-              type="button"
-              value="0"
-              onclick="dis('0')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-          <td>
-            <input
-              type="button"
-              value="."
-              onclick="dis('.')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-
-          <!-- solve function call function solve to evaluate value -->
-          <td><input type="button" value="=" onclick="solve()" /></td>
-
-          <td>
-            <input
-              type="button"
-              value="+"
-              onclick="dis('+')"
-              onkeydown="myFunction(event)"
-            />
-          </td>
-        </tr>
-      </table>
+        <table class="calculator">
+            <tr>
+                <td colspan="3"><input type="text" id="result" class="result-display" readonly></td>
+                <td><button class="calc-button" onclick="clr()">C</button></td>
+            </tr>
+            <tr>
+                <td><button class="calc-button" onclick="dis('1')">1</button></td>
+                <td><button class="calc-button" onclick="dis('2')">2</button></td>
+                <td><button class="calc-button" onclick="dis('3')">3</button></td>
+                <td><button class="calc-button" onclick="dis('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button class="calc-button" onclick="dis('4')">4</button></td>
+                <td><button class="calc-button" onclick="dis('5')">5</button></td>
+                <td><button class="calc-button" onclick="dis('6')">6</button></td>
+                <td><button class="calc-button" onclick="dis('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button class="calc-button" onclick="dis('7')">7</button></td>
+                <td><button class="calc-button" onclick="dis('8')">8</button></td>
+                <td><button class="calc-button" onclick="dis('9')">9</button></td>
+                <td><button class="calc-button" onclick="dis('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="calc-button" onclick="dis('0')">0</button></td>
+                <td><button class="calc-button" onclick="dis('.')">.</button></td>
+                <td><button class="calc-button" onclick="solve()">=</button></td>
+                <td><button class="calc-button" onclick="dis('+')">+</button></td>
+            </tr>
+        </table>
     </main>
-
     <script src="scripts/calculator.js"></script>
-  </body>
+</body>
 </html>
